@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Youama_Slider",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)-",
+    "homepage": "",
+    "description": "This module generate a dinamic Block what the user can past into any page. This Block show a Slider. Settings and informations at System -> Configuration -> Youama",
+    "authors": [
+    {
+        "name": "David Belicza",
+        "email": "87.bdavid@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

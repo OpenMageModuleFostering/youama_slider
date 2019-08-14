@@ -30,7 +30,7 @@
 <config>
     <tabs>
         <youama translate="label" module="customer">
-            <label>YOUAMA</label>
+            <label>YOUAMA &#9733;</label>
             <sort_order>1</sort_order>
         </youama>
     </tabs>

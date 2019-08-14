@@ -81,8 +81,8 @@
             </slideritem2>
             <animations>
                 <type>random</type>
-                <speed>0.5</speed>
-                <pausetime>3000</pausetime>
+                <speed>400</speed>
+                <pausetime>4000</pausetime>
                 <hover>1</hover>
                 <slices>15</slices>
                 <boxcols>8</boxcols>

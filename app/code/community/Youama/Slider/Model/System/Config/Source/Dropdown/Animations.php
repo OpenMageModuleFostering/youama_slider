@@ -36,6 +36,30 @@ class Youama_Slider_Model_System_Config_Source_Dropdown_Animations
                 'label' => 'Full Random',
             ),
             array(
+                'value' => 'slideInRight',
+                'label' => 'Slide In Right',
+            ),
+            array(
+                'value' => 'slideInLeft',
+                'label' => 'Slide In Left',
+            ),
+            array(
+                'value' => 'slideInRighteaseOutBounce',
+                'label' => 'Bouncing with Slide In Right',
+            ),
+            array(
+                'value' => 'slideInLefteaseOutBounce',
+                'label' => 'Bouncing with Slide In Left',
+            ),
+            array(
+                'value' => 'slideInRighteaseInOutCirc',
+                'label' => 'Braking with Slide In Right',
+            ),
+            array(
+                'value' => 'slideInLefteaseInOutCirc',
+                'label' => 'Braking with Slide In Left',
+            ),
+            array(
                 'value' => 'sliceDown',
                 'label' => 'Slice Down',
             ),
@@ -66,14 +90,6 @@ class Youama_Slider_Model_System_Config_Source_Dropdown_Animations
             array(
                 'value' => 'fade',
                 'label' => 'Fade',
-            ),
-            array(
-                'value' => 'slideInRight',
-                'label' => 'Slide In Right',
-            ),
-            array(
-                'value' => 'slideInLeft',
-                'label' => 'Slide In Left',
             ),
             array(
                 'value' => 'boxRandom',

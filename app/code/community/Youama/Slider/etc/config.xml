@@ -30,7 +30,7 @@
 <config>
     <modules>
         <Youama_Slider>
-            <version>2.0.2</version> 
+            <version>2.1.0</version> 
         </Youama_Slider>
     </modules>
     <global>
@@ -73,6 +73,7 @@
         <youamaslider>
             <mainoptions>
                 <jquery>1</jquery>
+                <jquery_ui>1</jquery_ui>
             </mainoptions>
             <slideritem1>
                 <link>#</link>

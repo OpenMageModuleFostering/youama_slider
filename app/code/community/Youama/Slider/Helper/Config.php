@@ -69,7 +69,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
         if (!isset($sliderItems[0]))
         {
             $sliderItems[0]['image'] = $this->_media . '111.jpg';
-            $sliderItems[0]['title'] = '16 animation types!';
+            $sliderItems[0]['title'] = '20 animation types!';
             $sliderItems[0]['link'] = 'http://www.youama.com/items';
                 
             $sliderItems[1]['image'] = $this->_media . '222.jpg';

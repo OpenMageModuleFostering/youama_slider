@@ -525,6 +525,64 @@
                     });
                     slider.trigger('nivo:animFinished'); 
                 });
+            } else if(currentEffect === 'slideInRighteaseInOutCirc'){
+                createSlices(slider, settings, vars);
+                
+                firstSlice = $('.nivo-slice:first', slider);
+                firstSlice.css({
+                    'width': '0px',
+                    'opacity': '1'
+                });
+
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'easeInOutCirc', function(){ slider.trigger('nivo:animFinished'); });
+            } else if(currentEffect === 'slideInLefteaseInOutCirc'){
+                createSlices(slider, settings, vars);
+                
+                firstSlice = $('.nivo-slice:first', slider);
+                firstSlice.css({
+                    'width': '0px',
+                    'opacity': '1',
+                    'left': '',
+                    'right': '0px'
+                });
+
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'easeInOutCirc', function(){ 
+                    // Reset positioning
+                    firstSlice.css({
+                        'left': '0px',
+                        'right': ''
+                    });
+                    slider.trigger('nivo:animFinished'); 
+                });
+            } else if(currentEffect === 'slideInRighteaseOutBounce'){
+                createSlices(slider, settings, vars);
+                
+                firstSlice = $('.nivo-slice:first', slider);
+                firstSlice.css({
+                    'width': '0px',
+                    'opacity': '1'
+                });
+
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'easeOutBounce', function(){ slider.trigger('nivo:animFinished'); });
+            } else if(currentEffect === 'slideInLefteaseOutBounce'){
+                createSlices(slider, settings, vars);
+                
+                firstSlice = $('.nivo-slice:first', slider);
+                firstSlice.css({
+                    'width': '0px',
+                    'opacity': '1',
+                    'left': '',
+                    'right': '0px'
+                });
+
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'easeOutBounce', function(){ 
+                    // Reset positioning
+                    firstSlice.css({
+                        'left': '0px',
+                        'right': ''
+                    });
+                    slider.trigger('nivo:animFinished'); 
+                });
             } else if(currentEffect === 'boxRandom'){
                 createBoxes(slider, settings, vars);
                 

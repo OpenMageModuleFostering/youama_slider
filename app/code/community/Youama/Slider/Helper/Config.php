@@ -68,13 +68,21 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
         
         if (!isset($sliderItems[0]))
         {
-            $sliderItems[0]['image'] = $this->_media . 'default1.jpg';
-            $sliderItems[0]['title'] = 'Youama Slider is installed';
-            $sliderItems[0]['link'] = '#';
+            $sliderItems[0]['image'] = $this->_media . '111.jpg';
+            $sliderItems[0]['title'] = '16 animation types!';
+            $sliderItems[0]['link'] = 'http://www.youama.com/items';
                 
-            $sliderItems[1]['image'] = $this->_media . 'default2.jpg';
-            $sliderItems[1]['title'] = 'Lorem ipsum sit dolor amet. This is not Klingon language.';
-            $sliderItems[1]['link'] = '#';  
+            $sliderItems[1]['image'] = $this->_media . '222.jpg';
+            $sliderItems[1]['title'] = 'The most popular jQuery slider!';
+            $sliderItems[1]['link'] = 'http://www.youama.com/items';
+            
+            $sliderItems[2]['image'] = $this->_media . '333.jpg';
+            $sliderItems[2]['title'] = 'From Magento Connect by Youama.com';
+            $sliderItems[2]['link'] = 'http://www.youama.com/items';
+            
+            $sliderItems[3]['image'] = $this->_media . '444.jpg';
+            $sliderItems[3]['title'] = '- Easy admin management<br />- Design via admin page<br />- It\'s all free!';
+            $sliderItems[3]['link'] = 'http://www.youama.com/items';
         }
         
         $this->_sliders = $sliderItems;

@@ -26,6 +26,9 @@
  * @license    http://youama.com/freemodule-license.txt
  */
 
+/**
+ * Deprecated from Youama_Slider 2.1.1
+ */
 class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
 {
     private $_configs;

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?php
 /**
  * YouAMA.com
  *
@@ -26,26 +25,33 @@
  * @copyright  Copyright (c) 2012 YouAMA.com (http://www.youama.com/)
  * @license    http://youama.com/freemodule-license.txt
  */
--->
-<layout version="0.1.0">
-    <default>
-        <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>css/youama/slider/slider.css</name></action>
-            <action ifconfig="youamaslider/mainoptions/jquery" method="addJs"><script>youama/jquery-1-7-1.js</script></action>
-            <action ifconfig="youamaslider/mainoptions/jquery_ui" method="addJs"><script>youama/slider/jquery-1-10-3-ui.js</script></action>
-            <action method="addJs"><script>youama/slider/slider.js</script></action>
-            <block type="youama_slider/slider" name="youamaslider" as="youamaslider">
-                <action method="setTemplate">
-                    <template>youama/slider/style.phtml</template>
-                </action>
-            </block>
-        </reference>
-        <reference name="content">
-            <!--<block type="youama_slider/slider" name="youamaslider" as="youamaslider">
-                <action method="setTemplate">
-                    <template>youama/slider/slider.phtml</template>
-                </action>
-            </block>-->
-        </reference>
-    </default>
-</layout>
+?>
+<?php $design = $this->getDesign(); ?>
+
+<style>
+    .nivo-caption, .nivo-caption *{
+        <?php echo $design['textscolor']; ?>
+    }
+    .nivo-caption{
+        <?php echo $design['bgscolor']; ?>
+        <?php echo $design['textopacity']; ?>
+        <?php echo $design['textpos']; ?>
+        <?php echo $design['textsize']; ?>
+    }
+    
+    .nivo-controlNav a{
+        <?php echo $design['buttonscolor']; ?>
+    }
+    .nivo-controlNav a.active, .nivo-controlNav a:hover{
+        <?php echo $design['buttonscolorhover']; ?>
+    }
+    .nivo-controlNav{
+        <?php echo $design['buttonpos']; ?>
+    }
+    .nivo-nextNav{
+        <?php echo $design['nextimage']; ?>
+    }
+    .nivo-prevNav{
+        <?php echo $design['previmage']; ?>
+    }
+</style>

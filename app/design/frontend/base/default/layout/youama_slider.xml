@@ -31,8 +31,7 @@
     <default>
         <reference name="head">
             <action method="addItem"><type>skin_css</type><name>css/youama/slider/slider.css</name></action>
-            <!-- delete the following one line if you have integrated jquery on frontend area by another module -->
-            <action method="addJs"><script>youama/jquery-1-7-1.js</script></action>
+            <action ifconfig="youamaslider/mainoptions/jquery" method="addJs"><script>youama/jquery-1-7-1.js</script></action>
             <action method="addJs"><script>youama/slider/slider.js</script></action>
         </reference>
         <reference name="content">

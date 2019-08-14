@@ -54,12 +54,15 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
         $item = 0;
         for ($i = 0; $i < 6; $i++)
         {
-            if ($this->_configs["slideritem$i"]['image'] != null && $this->_configs["slideritem$i"]['image'] != '')
+            if (isset($this->_configs["slideritem$i"]['image']))
             {
-                $sliderItems[$item]['image'] = $this->_media . $this->_configs["slideritem$i"]['image'];
-                $sliderItems[$item]['title'] = $this->_configs["slideritem$i"]['title'];
-                $sliderItems[$item]['link'] = $this->_configs["slideritem$i"]['link'];
-                $item++;
+                if ($this->_configs["slideritem$i"]['image'] != null && $this->_configs["slideritem$i"]['image'] != '')
+                {
+                    $sliderItems[$item]['image'] = $this->_media . $this->_configs["slideritem$i"]['image'];
+                    $sliderItems[$item]['title'] = $this->_configs["slideritem$i"]['title'];
+                    $sliderItems[$item]['link'] = $this->_configs["slideritem$i"]['link'];
+                    $item++;
+                }
             }
         }
         
@@ -139,7 +142,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
             $color1 = '#' . $this->_configs['design']['buttonscolor'];
             $color2 = '#' . $this->_configs['design']['buttonscolorup'];
             
-            $colors .= 'background-color:' . $color1 . ';';
+            $colors = 'background-color:' . $color1 . ';';
             $colors .= 'background-image:linear-gradient(bottom, ' . $color1 . ' 1%, ' . $color2 . ' 100%);';
             $colors .= 'background-image:-o-linear-gradient(bottom, ' . $color1 . ' 1%, ' . $color2 . ' 100%);';
             $colors .= 'background-image:-moz-linear-gradient(bottom, ' . $color1 . ' 1%, ' . $color2 . ' 100%);';
@@ -149,7 +152,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
             
             $this->_configs['design']['buttonscolor'] = $colors;
             
-            $colorshover .= 'background-color:' . $color2 . ';';
+            $colorshover = 'background-color:' . $color2 . ';';
             $colorshover .= 'background-image:linear-gradient(bottom, ' . $color2 . ' 1%, ' . $color1 . ' 100%);';
             $colorshover .= 'background-image:-o-linear-gradient(bottom, ' . $color2 . ' 1%, ' . $color1 . ' 100%);';
             $colorshover .= 'background-image:-moz-linear-gradient(bottom, ' . $color2 . ' 1%, ' . $color1 . ' 100%);';
@@ -198,13 +201,28 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
             $this->_configs['design']['nextpreven'] = 'false';
         }
         
-        if ($this->_configs['design']['nextimage'] != '' && $this->_configs['design']['nextimage'] != null)
+        if (isset($this->_configs['design']['nextimage']))
         {
-            $this->_configs['design']['nextimage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['nextimage'] . "')";
+            if ($this->_configs['design']['nextimage'] != '' && $this->_configs['design']['nextimage'] != null)
+            {
+                $this->_configs['design']['nextimage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['nextimage'] . "')";
+            }
         }
-        if ($this->_configs['design']['previmage'] != '' && $this->_configs['design']['previmage'] != null)
+        else
         {
-            $this->_configs['design']['previmage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['previmage'] . "')";
+            $this->_configs['design']['nextimage'] = '';
+        }
+        
+        if (isset($this->_configs['design']['previmage']))
+        {
+            if ($this->_configs['design']['previmage'] != '' && $this->_configs['design']['previmage'] != null)
+            {
+                $this->_configs['design']['previmage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['previmage'] . "')";
+            }
+        }
+        else
+        {
+            $this->_configs['design']['previmage'] = '';
         }
         
         $fontsize = ((int)$this->_configs['design']['textsize'] >= 6 && (int)$this->_configs['design']['textsize'] <= 62) ? (int)$this->_configs['design']['textsize'] : '18';

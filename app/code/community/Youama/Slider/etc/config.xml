@@ -71,6 +71,9 @@
     
     <default>
         <youamaslider>
+            <mainoptions>
+                <jquery>1</jquery>
+            </mainoptions>
             <slideritem1>
                 <link>#</link>
                 <title>You installed the sweet Youama Slider</title>

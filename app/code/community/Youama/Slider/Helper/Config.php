@@ -39,7 +39,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
     public function __construct()
     {
         $this->_configs = Mage::getStoreConfig('youamaslider');
-        $this->_media = Mage::getBaseUrl('media') . 'youama'. DS . 'slider' . DS;
+        $this->_media = Mage::getBaseUrl('media') . 'youama/slider/';
         
         $this->setSliders();
         $this->setDesign();
@@ -205,7 +205,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
         {
             if ($this->_configs['design']['nextimage'] != '' && $this->_configs['design']['nextimage'] != null)
             {
-                $this->_configs['design']['nextimage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['nextimage'] . "')";
+                $this->_configs['design']['nextimage'] = "background-image:url('" . $this->_media . '/nextprev/' . $this->_configs['design']['nextimage'] . "')";
             }
         }
         else
@@ -217,7 +217,7 @@ class Youama_Slider_Helper_Config extends Mage_Core_Helper_Abstract
         {
             if ($this->_configs['design']['previmage'] != '' && $this->_configs['design']['previmage'] != null)
             {
-                $this->_configs['design']['previmage'] = "background-image:url('" . $this->_media . DS . 'nextprev' . DS . $this->_configs['design']['previmage'] . "')";
+                $this->_configs['design']['previmage'] = "background-image:url('" . $this->_media . '/nextprev/' . $this->_configs['design']['previmage'] . "')";
             }
         }
         else

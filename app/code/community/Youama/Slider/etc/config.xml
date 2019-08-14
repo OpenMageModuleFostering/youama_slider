@@ -30,7 +30,7 @@
 <config>
     <modules>
         <Youama_Slider>
-            <version>1.0</version> 
+            <version>1.0.1</version> 
         </Youama_Slider>
     </modules>
     <global>

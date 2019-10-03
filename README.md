@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This module generate a dinamic Block what the user can past into any page. This Block show a Slider. Settings and informations at System -> Configuration -> Youama
